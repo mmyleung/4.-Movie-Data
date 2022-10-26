@@ -34,4 +34,4 @@ let movieData = {
     },
   };
 
-  
+  const form = document.getElementById("newMovieForm");
