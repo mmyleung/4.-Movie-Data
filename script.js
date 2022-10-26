@@ -39,3 +39,10 @@ let movieData = {
 
   }
   form.addEventListener("submit", handleForm);
+
+  const newTitle = document.getElementById("newTitle").innerText;
+  const newRating = parse.Float(document.getElementById("newRating").innerText);
+  const newYear = parse.Int(document.getElementById("newYear").innerText);
+  const newRuntime = parse.Int(document.getElementById("newRunTime").innerText);
+  const newCast = document.getElementById("newCast").innerText;
+  const newPlot = document.getElementById("newPlot").innerText;
