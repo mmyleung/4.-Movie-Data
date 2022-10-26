@@ -35,3 +35,7 @@ let movieData = {
   };
 
   const form = document.getElementById("newMovieForm");
+  function handleForm() {
+
+  }
+  form.addEventListener("submit", handleForm);
