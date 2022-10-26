@@ -11,3 +11,9 @@
     justify-content:space-around;
     width:100%;
 }
+
+.castContainer, .plotContainer {
+    text-align: left;
+    width:100%;
+
+}
