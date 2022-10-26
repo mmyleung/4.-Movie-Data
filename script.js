@@ -1,3 +1,14 @@
+class movieData {
+    constructor(title,rating,year,runtime,cast,plot) {
+        this.title = title;
+        this.rating = rating;
+        this.year = year;
+        this.runtime = runtime;
+        this.cast = cast;
+        this.plot = plot;
+    }
+}
+
 let movieData = {
     "The Darjeeling Limited": {
       plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
@@ -46,3 +57,5 @@ let movieData = {
   const newRuntime = parse.Int(document.getElementById("newRunTime").innerText);
   const newCast = document.getElementById("newCast").innerText;
   const newPlot = document.getElementById("newPlot").innerText;
+
+  new movieData 
