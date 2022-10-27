@@ -1,13 +1,4 @@
-class movieData {
-    constructor(title,rating,year,runtime,cast,plot) {
-        this.title = title;
-        this.rating = rating;
-        this.year = year;
-        this.runtime = runtime;
-        this.cast = cast;
-        this.plot = plot;
-    }
-}
+
 
 let movieData = {
     "The Darjeeling Limited": {
@@ -45,17 +36,45 @@ let movieData = {
     },
   };
 
-  const form = document.getElementById("newMovieForm");
-  function handleForm() {
-
-  }
-  form.addEventListener("submit", handleForm);
-
-  const newTitle = document.getElementById("newTitle").innerText;
-  const newRating = parse.Float(document.getElementById("newRating").innerText);
-  const newYear = parse.Int(document.getElementById("newYear").innerText);
-  const newRuntime = parse.Int(document.getElementById("newRunTime").innerText);
-  const newCast = document.getElementById("newCast").innerText;
-  const newPlot = document.getElementById("newPlot").innerText;
-
-  new movieData 
+console.log(Object.keys(movieData)[0]);
+//document.getElementById("title").innerText = "Title";
+console.log(movieData["The Darjeeling Limited"].year);
+document.getElementById("year").innerHTML = movieData["The Darjeeling Limited"];
+document.write("<table>");
+document.write("<tr>");
+document.write("<td>Title</td>");
+//table row for title
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Rating</td>");
+//table column for Rating
+document.write("<td>Year</td>");
+//table column for Year
+document.write("<td>Runtime</td>");
+//table column for Runtime
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>1</td>");
+//table column for movieData rating
+document.write("<td>1</td>");
+//table column for movieData year
+document.write("<td>1</td>");
+//table column for movieData runtime
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Cast</td>");
+//table row for Cast
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>1</td>");
+//table row for movieData cast
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Plot</td>");
+//table row for Plot
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>1</td>");
+//table row for movieData plot
+document.write("</tr>");
+document.write("</table>");
