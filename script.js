@@ -37,7 +37,7 @@ let movieData = {
   };
 function displayMovieData () {
  for (let x = 0; x < Object.keys(movieData).length; x++) {
-  document.write("<table>");
+document.write("<table>");
 document.write("<tr>");
 document.write("<td>");
 document.write(Object.keys(movieData)[x]);
@@ -45,14 +45,36 @@ document.write("</td>");
 //table row for title
 document.write("</tr>");
 document.write("<tr>");
+document.write("<td>Rating</td>");
+//table column for Rating
+document.write("<td>Year</td>");
+//table column for Year
+document.write("<td>Runtime</td>");
+//table column for Runtime
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>");
+document.write(Object.values(movieData)[x].rating);
+document.write("</td>");
+//table column for movieData rating
+document.write("<td>");
+document.write(Object.values(movieData)[x].year);
+document.write("</td>");
+//table column for movieData year
+document.write("<td>");
+document.write(Object.values(movieData)[x].runtime);
+document.write("</td>");
+//table column for movieData runtime
+document.write("</tr>");
+
   }
 }
   displayMovieData();
 
 console.log(Object.keys(movieData)[0]);
-//document.getElementById("title").innerText = "Title";
+document.getElementById("title").innerText = "Title";
 console.log(movieData["The Darjeeling Limited"].year);
-//document.getElementById("year").innerHTML = movieData["The Darjeeling Limited"].year;
+document.getElementById("year").innerHTML = movieData["The Darjeeling Limited"].year;
 document.write("<table>");
 document.write("<tr>");
 document.write("<td>Title</td>");
