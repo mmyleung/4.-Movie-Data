@@ -1,5 +1,6 @@
 
 
+
 let movieData = {
     "The Darjeeling Limited": {
       plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
@@ -35,6 +36,8 @@ let movieData = {
       cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
     },
   };
+
+
 function displayMovieData () {
  for (let x = 0; x < Object.keys(movieData).length; x++) {
 document.write("<table id = displayTable>");
@@ -93,3 +96,19 @@ document.write("<br></br>");
   }
 }
   displayMovieData();
+  const form = document.getElementById('newMovieForm');
+
+  const newTitle = document.getElementById("newTitle");
+  const newRating = document.getElementById("newRating");
+  const newYear = document.getElementById("newYear");
+  const newRuntime = document.getElementById("newRuntime");
+  const newCast = document.getElementById("newCast");
+  const newPlot = document.getElementById("newPlot");
+
+function handleForm(event) {
+  
+        event.preventDefault();
+  
+    }
+
+form.addEventListener('submit',handleForm);
