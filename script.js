@@ -35,11 +35,24 @@ let movieData = {
       cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
     },
   };
+function displayMovieData () {
+ for (let x = 0; x < Object.keys(movieData).length; x++) {
+  document.write("<table>");
+document.write("<tr>");
+document.write("<td>");
+document.write(Object.keys(movieData)[x]);
+document.write("</td>");
+//table row for title
+document.write("</tr>");
+document.write("<tr>");
+  }
+}
+  displayMovieData();
 
 console.log(Object.keys(movieData)[0]);
 //document.getElementById("title").innerText = "Title";
 console.log(movieData["The Darjeeling Limited"].year);
-document.getElementById("year").innerHTML = movieData["The Darjeeling Limited"];
+//document.getElementById("year").innerHTML = movieData["The Darjeeling Limited"].year;
 document.write("<table>");
 document.write("<tr>");
 document.write("<td>Title</td>");
