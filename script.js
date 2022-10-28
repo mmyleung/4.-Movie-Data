@@ -37,99 +37,59 @@ let movieData = {
   };
 function displayMovieData () {
  for (let x = 0; x < Object.keys(movieData).length; x++) {
-document.write("<table>");
+document.write("<table id = displayTable>");
 document.write("<tr>");
-document.write("<td>");
+document.write("<td colspan = 3>");
 document.write(Object.keys(movieData)[x]);
 document.write("</td>");
 //table row for title
 document.write("</tr>");
 document.write("<tr>");
-document.write("<td>Rating</td>");
+document.write("<td colspan = 1>Rating</td>");
 //table column for Rating
-document.write("<td>Year</td>");
+document.write("<td colspan = 1>Year</td>");
 //table column for Year
-document.write("<td>Runtime</td>");
+document.write("<td colspan = 1>Runtime</td>");
 //table column for Runtime
 document.write("</tr>");
 document.write("<tr>");
-document.write("<td>");
+document.write("<td colspan = 1>");
 document.write(Object.values(movieData)[x].rating);
 document.write("</td>");
 //table column for movieData rating
-document.write("<td>");
+document.write("<td colspan = 1>");
 document.write(Object.values(movieData)[x].year);
 document.write("</td>");
 //table column for movieData year
-document.write("<td>");
+document.write("<td colspan = 1>");
 document.write(Object.values(movieData)[x].runtime);
 document.write("</td>");
 //table column for movieData runtime
 document.write("</tr>");
+document.write("<br></br>");
 document.write("<tr>");
-document.write("<td>Cast</td>");
+document.write("<td colspan = 3>Cast</td>");
 //table row for Cast
 document.write("</tr>");
 document.write("<tr>");
-document.write("<td>");
+document.write("<td colspan = 3>");
 document.write(Object.values(movieData)[x].cast);
 document.write("</td>");
 //table row for movieData cast
 document.write("</tr>");
+document.write("<br></br>"); 
 document.write("<tr>");
-document.write("<td>Plot</td>");
+document.write("<td colspan = 3>Plot</td>");
 //table row for Plot
 document.write("</tr>");
 document.write("<tr>");
-document.write("<td>");
+document.write("<td colspan = 3>");
 document.write(Object.values(movieData)[x].plot);
 document.write("</td>");
 //table row for movieData plot
 document.write("</tr>");
 document.write("</table>");
+document.write("<br></br>");
   }
 }
   displayMovieData();
-
-console.log(Object.keys(movieData)[0]);
-document.getElementById("title").innerText = "Title";
-console.log(movieData["The Darjeeling Limited"].year);
-document.getElementById("year").innerHTML = movieData["The Darjeeling Limited"].year;
-document.write("<table>");
-document.write("<tr>");
-document.write("<td>Title</td>");
-//table row for title
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>Rating</td>");
-//table column for Rating
-document.write("<td>Year</td>");
-//table column for Year
-document.write("<td>Runtime</td>");
-//table column for Runtime
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>1</td>");
-//table column for movieData rating
-document.write("<td>1</td>");
-//table column for movieData year
-document.write("<td>1</td>");
-//table column for movieData runtime
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>Cast</td>");
-//table row for Cast
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>1</td>");
-//table row for movieData cast
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>Plot</td>");
-//table row for Plot
-document.write("</tr>");
-document.write("<tr>");
-document.write("<td>1</td>");
-//table row for movieData plot
-document.write("</tr>");
-document.write("</table>");
