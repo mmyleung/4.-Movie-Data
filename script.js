@@ -66,7 +66,27 @@ document.write(Object.values(movieData)[x].runtime);
 document.write("</td>");
 //table column for movieData runtime
 document.write("</tr>");
-
+document.write("<tr>");
+document.write("<td>Cast</td>");
+//table row for Cast
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>");
+document.write(Object.values(movieData)[x].cast);
+document.write("</td>");
+//table row for movieData cast
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>Plot</td>");
+//table row for Plot
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>");
+document.write(Object.values(movieData)[x].plot);
+document.write("</td>");
+//table row for movieData plot
+document.write("</tr>");
+document.write("</table>");
   }
 }
   displayMovieData();
