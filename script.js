@@ -96,19 +96,36 @@ document.write("<br></br>");
   }
 }
   displayMovieData();
+
   const form = document.getElementById('newMovieForm');
 
-  const newTitle = document.getElementById("newTitle");
-  const newRating = document.getElementById("newRating");
-  const newYear = document.getElementById("newYear");
-  const newRuntime = document.getElementById("newRuntime");
-  const newCast = document.getElementById("newCast");
-  const newPlot = document.getElementById("newPlot");
+  
 
 function handleForm(event) {
+  event.preventDefault();
+  const newTitle = document.getElementById("newTitle").value;
+  const newRating = document.getElementById("newRating").value;
+  const newYear = document.getElementById("newYear").value;
+  const newRuntime = document.getElementById("newRuntime").value;
+  const newCast = document.getElementById("newCast").value;
+  const newPlot = document.getElementById("newPlot").value;
   
-        event.preventDefault();
-  
+  var addNewMovie = {
+    newTitle: {
+      rating: newRating,
+      year: newYear,
+      runtime: newRuntime,
+      cast: newCast,
+      plot: newPlot,
+
+    }
+  };
+        Object.assign(movieData, addNewMovie)
+console.log(movieData);
+displayMovieData();
     }
 
 form.addEventListener('submit',handleForm);
+
+
+
