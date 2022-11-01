@@ -52,7 +52,7 @@ document.write("<td colspan = 1>Rating</td>");
 //table column for Rating
 document.write("<td colspan = 1>Year</td>");
 //table column for Year
-document.write("<td colspan = 1>Runtime</td>");
+document.write("<td colspan = 1>Runtime (mins)</td>");
 //table column for Runtime
 document.write("</tr>");
 document.write("<tr>");
@@ -111,18 +111,18 @@ function handleForm(event) {
   const newPlot = document.getElementById("newPlot").value;
   
   var addNewMovie = {
-    newTitle: {
+    [newTitle]: {
       rating: newRating,
       year: newYear,
       runtime: newRuntime,
       cast: newCast,
       plot: newPlot,
-
     }
   };
         Object.assign(movieData, addNewMovie)
 console.log(movieData);
 displayMovieData();
+form.style.display = "block";
     }
 
 form.addEventListener('submit',handleForm);
