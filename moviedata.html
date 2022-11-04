@@ -9,8 +9,36 @@
     </head>
     <body>
         <header>Movie Database</header>
-        <div class="movieObjectContainer">
-        </div>
+        <div id="movieDataTable"></div>
+        <!-- <div class="movieObjectContainer">
+            <table id="movieTable">
+                <tr>
+                    <td colspan="3" id="movieTitle">Title</td>
+                </tr>
+                <tr>
+                    <th>Rating</th>
+                    <th>Year</th>
+                    <th>Runtime (mins)</th>
+                </tr>
+                <tr>
+                    <td id="movieRating">3.3</td>
+                    <td id="movieYear">2006</td>
+                    <td id="movieRuntime">90</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Cast</th>
+                </tr>
+                <tr>
+                    <td colspan="3" id="movieCast">Sample cast</td>
+                </tr>
+                <tr>
+                    <th colspan="3">Plot</th>
+                </tr>
+                <tr>
+                    <td  colspan="3" id="moviePlot">Sample Plot</td>
+                </tr>
+            </table>
+        </div> -->
         <form id="newMovieForm">
             <label for="newTitle">Title</label><input type="text" id="newTitle" required>
             <label for="newRating">Rating (0.0-10.0)</label><input type="number" id="newRating" min="0" max="10" step = "0.1" required>
