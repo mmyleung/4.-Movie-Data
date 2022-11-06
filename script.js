@@ -34,8 +34,10 @@ let movieData = {
     },
   };
 
-  const myTable = document.querySelector('#movieDataTable');
+  const tableContainer = document.querySelector('#movieDataTable');
+
   function displayMovieData() {
+
     let table = document.createElement('table');
     let titleRow = document.createElement('tr');
     let ratingRow = document.createElement('tr');
@@ -117,14 +119,17 @@ let movieData = {
   table.appendChild(castNameRow);
   table.appendChild(plotRow);
   table.appendChild(plotOutlineRow);
-  myTable.appendChild(table);
+  tableContainer.appendChild(table);
+  const oldTable = document.querySelector("table");
+  oldTable.parentNode.replaceChild(table, oldTable);
+
 }
 
 displayMovieData();
 
 const form = document.getElementById('newMovieForm');
 
-  
+  // console.log("this is the table", myTable);
 
 function handleForm(event) {
   event.preventDefault();
@@ -145,9 +150,7 @@ function handleForm(event) {
     }
   };
         Object.assign(movieData, addNewMovie)
-console.log(movieData);
 displayMovieData();
-form.style.display = "block";
     }
 
 form.addEventListener('submit',handleForm);
