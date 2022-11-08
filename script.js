@@ -129,8 +129,6 @@ displayMovieData();
 
 const form = document.getElementById('newMovieForm');
 
-  // console.log("this is the table", myTable);
-
 function handleForm(event) {
   event.preventDefault();
   const newTitle = document.getElementById("newTitle").value;
@@ -154,3 +152,107 @@ displayMovieData();
     }
 
 form.addEventListener('submit',handleForm);
+
+//to sort movies by alphabetical order, access variables in object then sort them by alphabetical order then return them in that order to pass
+// through displayMovieData ();
+
+const alphabeticalOrdered = Object.keys(movieData).sort().reduce(
+  (obj, key) => {
+    obj[key] = movieData[key];
+    return obj;
+  },
+  {}
+);
+console.log(alphabeticalOrdered);
+
+function displayMovieDataAlphabet() {
+
+  let table = document.createElement('table');
+  let titleRow = document.createElement('tr');
+  let ratingRow = document.createElement('tr');
+  let ratingScoreRow = document.createElement('tr');
+  let yearRow = document.createElement('tr');
+  let yearNmbRow = document.createElement('tr');
+  let runtimeRow = document.createElement('tr');
+  let runtimeMinRow = document.createElement('tr');
+  let castRow = document.createElement('tr');
+  let castNameRow = document.createElement('tr');
+  let plotRow = document.createElement('tr');
+  let plotOutlineRow = document.createElement('tr');
+for (let x = 0; x < Object.keys(alphabeticalOrdered).length; x++) {
+  let header = document.createElement('th');
+  let textNode = document.createTextNode(Object.keys(alphabeticalOrdered)[x]);
+  header.appendChild(textNode);
+  titleRow.appendChild(header);
+  
+  let cell1 = document.createElement('td');
+  let rating = document.createTextNode('Rating');
+  cell1.appendChild(rating);
+  ratingRow.appendChild(cell1);
+
+  let cell2 = document.createElement('td');
+  let ratingScore = document.createTextNode(Object.values(alphabeticalOrdered)[x].rating);
+  cell2.appendChild(ratingScore);
+  ratingScoreRow.appendChild(cell2);
+
+  let cell3 = document.createElement('td');
+  let year = document.createTextNode('Year');
+  cell3.appendChild(year);
+  yearRow.appendChild(cell3);
+
+  let cell4 = document.createElement('td');
+  let yearNmb = document.createTextNode(Object.values(alphabeticalOrdered)[x].year);
+  cell4.appendChild(yearNmb);
+  yearNmbRow.appendChild(cell4);
+
+  let cell5 = document.createElement('td');
+  let runtime = document.createTextNode('Runtime');
+  cell5.appendChild(runtime);
+  runtimeRow.appendChild(cell5);
+
+  let cell6 = document.createElement('td');
+  let runtimeMin = document.createTextNode(Object.values(alphabeticalOrdered)[x].runtime);
+  cell6.appendChild(runtimeMin);
+  runtimeMinRow.appendChild(cell6);
+
+  let cell7 = document.createElement('td');
+  let cast = document.createTextNode('Cast');
+  cell7.appendChild(cast);
+  castRow.appendChild(cell7);
+
+  let cell8 = document.createElement('td');
+  let castName = document.createTextNode(Object.values(alphabeticalOrdered)[x].cast);
+  cell8.appendChild(castName);
+  castNameRow.appendChild(cell8);
+
+  let cell9 = document.createElement('td');
+  let plot = document.createTextNode('Plot');
+  cell9.appendChild(plot);
+  plotRow.appendChild(cell9);
+
+  let cell10 = document.createElement('td');
+  let plotOutline = document.createTextNode(Object.values(alphabeticalOrdered)[x].plot);
+  cell10.appendChild(plotOutline);
+  plotOutlineRow.appendChild(cell10);
+
+
+}
+table.appendChild(titleRow);
+table.appendChild(ratingRow);
+table.appendChild(ratingScoreRow);
+table.appendChild(yearRow);
+table.appendChild(yearNmbRow);
+table.appendChild(runtimeRow);
+table.appendChild(runtimeMinRow);
+table.appendChild(castRow);
+table.appendChild(castNameRow);
+table.appendChild(plotRow);
+table.appendChild(plotOutlineRow);
+tableContainer.appendChild(table);
+const oldTable = document.querySelector("table");
+oldTable.parentNode.replaceChild(table, oldTable);
+
+}
+
+const alphabeticalOrderBtn = document.getElementById("alphabetical");
+alphabeticalOrderBtn.addEventListener("click",displayMovieDataAlphabet);
