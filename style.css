@@ -1,6 +1,7 @@
 body {
     padding:0;
     margin:30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -32,7 +33,36 @@ th {
     padding: 8px;
 }
 
+#movieFormContainer {
+    width:50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 form {
+    width:100%;
     display:flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    margin:10px 0;
+}
+
+input {
+    padding:5px;
+}
+
+#submitbtn {
+    width:20%;
+    align-items: center;
+    margin: 20px auto;
+
+
+}
+
+#rating {
+    font-style: italic;
 }

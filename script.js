@@ -187,6 +187,7 @@ for (let x = 0; x < Object.keys(alphabeticalOrdered).length; x++) {
   
   let cell1 = document.createElement('td');
   let rating = document.createTextNode('Rating');
+  rating.setAttribute("id","rating");
   cell1.appendChild(rating);
   ratingRow.appendChild(cell1);
 

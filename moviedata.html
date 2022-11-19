@@ -10,17 +10,25 @@
     <body>
         <header>Movie Database</header>
         <button id="alphabetical">Sort by alphabetical order</button>
-        <div id="movieDataTable"></div>
+        <input type="select">
+        <li>A-Z</li>
+        <li>Runtime (shortest first)</li>
+        <li>Date released (latest first)</li>
+        </input>
 
+        <div id="movieDataTable"></div>
+        <div id="movieFormContainer">
         <form id="newMovieForm">
+            <h3>Add a new movie to the database below:</h3>
             <label for="newTitle">Title</label><input type="text" id="newTitle" required>
             <label for="newRating">Rating (0.0-10.0)</label><input type="number" id="newRating" min="0" max="10" step = "0.1" required>
             <label for="newYear">Year</label><input type="number" id="newYear" min="1895" required>
             <label for="newRuntime">Runtime (mins)</label><input type="number" id="newRuntime" required>
             <label for="newCast">Cast</label><input type="text" id="newCast" required>
             <label for="newPlot">Plot</label><input type="text" id="newPlot" required>
-            <input type="submit" value="submit">
+            <input type="submit" value="Submit" id="submitbtn">
         </form>
+    </div>
         <script src="script.js"></script>
     </body>
 </html>
