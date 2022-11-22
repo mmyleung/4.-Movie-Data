@@ -187,7 +187,6 @@ for (let x = 0; x < Object.keys(alphabeticalOrdered).length; x++) {
   
   let cell1 = document.createElement('td');
   let rating = document.createTextNode('Rating');
-  rating.setAttribute("id","rating");
   cell1.appendChild(rating);
   ratingRow.appendChild(cell1);
 
@@ -257,3 +256,17 @@ oldTable.parentNode.replaceChild(table, oldTable);
 
 const alphabeticalOrderBtn = document.getElementById("alphabetical");
 alphabeticalOrderBtn.addEventListener("click",displayMovieDataAlphabet);
+
+const sortBy = document.getElementById("sortBy");
+sortBy.addEventListener("change", function handleChange(event) {
+  console.log(event.target.value);
+  if (event.target.value == "atoz") {
+    displayMovieDataAlphabet();
+  }
+});
+
+// function sort (event) {
+//   if (event.target.value == atoz) {
+// displayMovieDataAlphabet();
+//   }
+// }
