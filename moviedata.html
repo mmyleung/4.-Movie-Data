@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Movie Data</title>
         <link rel="stylesheet" href="style.css">
-
     </head>
     <body>
         <header>Movie Database</header>
         <button id="alphabetical">Sort by alphabetical order</button>
+        <select name = "sortBy" id="sortBy">
+            <option value = "sort">Sort By:</option>
+            <option value = "atoz">A - Z</option>
+            <option value = "runtime">Runtime (shortest first)</option>
+            <option value = "date">Date released (latest first)</option>
+        </select>
         <input type="select">
         <li>A-Z</li>
         <li>Runtime (shortest first)</li>
