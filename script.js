@@ -254,9 +254,6 @@ oldTable.parentNode.replaceChild(table, oldTable);
 
 }
 
-const alphabeticalOrderBtn = document.getElementById("alphabetical");
-alphabeticalOrderBtn.addEventListener("click",displayMovieDataAlphabet);
-
 const sortBy = document.getElementById("sortBy");
 sortBy.addEventListener("change", function handleChange(event) {
   console.log(event.target.value);
@@ -264,9 +261,3 @@ sortBy.addEventListener("change", function handleChange(event) {
     displayMovieDataAlphabet();
   }
 });
-
-// function sort (event) {
-//   if (event.target.value == atoz) {
-// displayMovieDataAlphabet();
-//   }
-// }
